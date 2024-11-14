@@ -1,0 +1,10 @@
+{
+  "packages": [
+    "nixpkgs#kubectl",
+    "nixpkgs#kind",
+    "nixpkgs#argocd",
+    "nixpkgs#kubernetes-helm",
+    "nixpkgs#docker"
+  ]
+}
+

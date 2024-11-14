@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: argocd-playground
+  description: ArgoCD Playground setup using Nix, Devbox, and KinD
+  tags:
+    - kubernetes
+    - argocd
+    - nix
+    - devbox
+    - kind
+spec:
+  type: service
+  lifecycle: experimental
+  owner: platform-team

@@ -1,0 +1,33 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: argocd-playground
+  description: ArgoCD playground environment with KinD cluster setup
+  annotations:
+    github.com/project-slug: ElzWhere/argocd-playground
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - kubernetes
+    - argocd
+    - devops
+spec:
+  type: service
+  lifecycle: experimental
+  owner: platform-team
+  system: infrastructure
+  providesApis:
+    - argocd-api
+  dependsOn:
+    - resource:kubernetes-cluster
+  consumesApis:
+    - kubernetes-api
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: kubernetes-cluster
+  description: Local KinD Kubernetes cluster
+spec:
+  type: kubernetes-cluster
+  owner: platform-team
+  system: infrastructure
